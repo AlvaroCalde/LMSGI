@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Nombre: Álvaro calderón
+Descripción: Información de un mail-->
+<mail>
+    <remitente>pepe@gmail.com</remitente>
+    <destinatario>sofia@gmail.com</destinatario>
+    <fecha>
+        <dia>27</dia>
+        <mes>11</mes>
+        <anyo>2024</anyo>
+    </fecha>
+    <asunto>Mensaje para cena de Navidad</asunto>
+    <mensaje>...</mensaje>
+    <fichero>
+    <nombre>invitacion.jpg</nombre>
+    <tipo></tipo>
+    </fichero>
+</mail>

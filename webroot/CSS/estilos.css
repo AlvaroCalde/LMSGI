@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+header, footer{
+    margin: 30px 60px 45px 10px; /*arriba, derecha, abajo, izquierda*/
+    padding: 20px;
+    border: 5px solid blue; /*Ancho de borde y color*/
+    background-color: aliceblue;
+}
+div>div{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-color: black;
+    border-style: solid;
+    border: 9px;
+    background-repeat: no-repeat;
+}
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    width: 630px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1,h2,h3,h4{
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 10px, 10px, 20px blue;
+}
+h3{
+    font-family: "Creepster", cursive;
+    font-size: 1em;
+}
+figcaption{
+    text-transform: capitalize;
+    text-decoration: underline blue wavy;
+    color: blue;
+    font-variant: small-caps;
+}
+p{
+    text-align: justify;
+    text-indent: 3em;
+    word-spacing: 5px;
+}
+#inicio{
+    width: 50%;
+    background-color: beige;
+    direction: rtl;
+}
+#inicio p{
+    white-space: nowrap;
+    height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

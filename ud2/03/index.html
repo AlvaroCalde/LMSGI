@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ud2.03 Álvaro Calderón</title>
+    <link href="../../CSS/estilos.css" rel="stylesheet" type="text/css"/>
+    <link href="CSS\estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body style="background-color: lightcyan;">
+    <header><h1><mark>Plantilla de formulario del fútbol español</mark></h1></header>
+<!--Aquí solo es poner nombre y 2 apellidos-->  
+   <fieldset>
+    <label for="gsearch">Buscar:</label>
+    <input type="search" id="gsearch">
+    <input type="submit" value="Submit">
+   </fieldset>
+    <fieldset>
+        <legend>Información personal</legend>
+            <label for="nombre"> Nombre:</label>
+            <input type="text" id="nombre" placeholder="Juan">
+            <label for="apellidos"> Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Cruz Felipez">
+            <label for="cont">Contraseña:</label>
+            <input type="password" id="cont" placeholder="***********">
+            <input type="hidden" id="escondido" value="Macarrones">
+    </fieldset>
+<!--Aquí hay que poner el género con opción a no decir por causas personales-->
+    <fieldset>
+        <legend>Género</legend>
+            <label for="hombre"> Hombre </label>
+            <input type="radio" id="hombre">
+            <label for="mujer"> Mujer </label>
+            <input type="radio" id="mujer">
+            <label for="nodecir"> Prefiero no decirlo </label>
+            <input type="radio" id="nodecir">
+    </fieldset>
+<!--Aunque aquí no tenga mucho sentido el checkbox lo puse para incluirlo ahora por orden, también lo usaré más tarde-->
+    <fieldset>
+        <legend><strong>Pregunta importante</strong>, ¿Te gusta el fútbol español?</legend>
+            <label for="si"> Si</label>
+            <input type="checkbox" id="si">
+            <label for="no"> No</label>
+            <input type="checkbox" id="no">
+    </fieldset>
+<!--Aquí pongo un tipo email para ponerlo-->
+    <fieldset>
+        <legend>Correo electrónico</legend>
+            <label for="correo"> Correo electrónico</label>
+            <input type="email" placeholder="xxxxxx@gmail.com" id="correo" required>
+    </fieldset>
+<!--aquí se pone el teléfono-->
+    <fieldset>
+        <legend>Número de teléfono</legend>
+            <label for="telf"> Telf:</label>
+            <input type="tel" placeholder="000 00 00 00" pattern="[0-9]{9}" id="telf">
+    </fieldset>
+<!--Aquí va el año de nacimiento-->
+    <fieldset>
+        <legend>Año de nacimiento</legend>
+            <label for="anyo"> Año de nacimiento</label>
+            <input type="date" id="anyo">
+    </fieldset>
+<!--Aquí va el código postal-->
+    <fieldset>
+        <legend>Código postal</legend>
+            <label for="cod"> Código postal</label>
+            <input type="number" id="cod" placeholder="00000">
+    </fieldset>
+<!--Aquí va la hora-->
+    <fieldset>
+        <legend>Hora a la que rellenas este formulario</legend>
+            <label for="tiempo"> Hora</label>
+            <input type="time" id="tiempo" min="00:00" max="23:59">
+    </fieldset>
+<!--Aquí va la semana-->    
+    <fieldset>
+        <legend>Semana en la que estás haciendo este formulario</legend>
+            <label for="sem"> Semana</label>
+            <input type="week" id="sem">
+    </fieldset>
+<!--Aquí va el mes-->    
+    <fieldset>
+        <legend>Mes en el que estás haciendo este formulario</legend>
+            <label for="mes"> Mes</label>
+            <input type="month" id="mes">
+    </fieldset>
+<!--Aquí va un rango de cuánto te gusta el fútbol-->
+    <fieldset>
+        <legend>¿Cuánto te gusta el fútbol de menos a más?</legend>
+        <label for="rang">Me gusta</label>
+        <input type="range" id="rang">
+    </fieldset>    
+<!--Ahora empieza la parte del deporte-->
+    <p><b>Ahora es el turno del fútbol</b></p>
+    <fieldset>
+        <p>Jugador de equipo pequeño favorito</p>
+            <select name="Jugador_fav">
+                <option value="isi">Isi Palazón</option>
+                <option value="juan">Juan cruz</option>
+                <option value="ming">Mingueza</option>
+                <option value="mol">Moleiro</option>
+                <option value="dar">Sergi Darder</option>
+                <option value="nin">Ninguno</option>
+            </select>
+    </fieldset>
+    <fieldset>
+        <label for="list">Equipo pequeño favorito</label>
+        <input list="equipo" id="list">
+        <datalist id="equipo">
+            <option value="Rayo Vallecano">
+            <option value="Celta de Vigo">
+            <option value="Mallorca">
+            <option value="Las Palmas">
+            <option value="Getafe">
+            <option value="Ninguno">
+        </datalist>
+    </fieldset>
+    <fieldset>
+        <legend>Color principal de equipación favorito</legend>
+        <label for="color">Color fav</label>
+        <input type="color" id="color">
+    </fieldset>
+    <fieldset>
+        <legend>Opina sobre el siguiente clip de Ontiveros</legend>
+        <p><a href="https://youtu.be/JdlwO0VUMRA?si=HSe7p4mLQrtkypZg">Golazo de Ontiveros</a>
+        <p>¿A juzgar por el vídeo es Ontiveros mejor que Cristiano y Messi juntos?</p>
+            <div>
+                <label for="s"> Si</label>
+                <input type="checkbox" id="s">
+                <label for="n"> No</label>
+                <input type="checkbox" id="n">
+            </div>
+    </fieldset>
+    <fieldset>
+        <legend>¿Qué piensas de la situación actual del fútbol español?</legend>
+        <textarea name="textarea" rows="3" cols="50" placeholder="Pon aquí tu opinión"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>¿En qué temporada estamos a 15/10/2024?</legend>
+            <input type="number">
+    </fieldset>
+    <fieldset>
+<!--En este punto ya me he quedado sin ideas, relleno como puedo-->        
+        <legend>¿Es Bryan Zaragoza el estereotipo de andaluz?</legend>
+        <label for="zar"></label>
+        <input type="image" src="/.../Imagenes/Bryan_Zaragoza.gif" id="zar" alt="Bryan" width="600">
+            <div>
+                <label for="ps">Por supuesto</label>
+                <input type="checkbox" id="ps">
+                <label for="psm">Por supuestísimo</label>
+                <input type="checkbox" id="psm">
+            </div>
+    </fieldset>
+    <fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+         </div>
+    </fieldset>
+    <footer>
+        <p>“202x-2x IES LOS SAUCES. ©Todos los derechos reservados. Álvaro Calderón</p>
+        <p>Este texto fue modificado por última vez en <time datetime="2024-10-14 18:25">2024-10-14</time></p>
+    </footer>
+</body>
+</html>

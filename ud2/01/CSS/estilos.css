@@ -1,0 +1,53 @@
+*{
+    width: 640px;
+    align-self: center;
+}   
+header{
+    position: center;
+    background-position: center,center;
+
+}
+body{
+    width: 16px;
+    background-color: #343a40;
+    background-position: center,center;
+
+}
+h1{
+    width: 32px;
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    background-position: center,center;
+
+}
+h2{
+    width: 24px;
+    font-family: "Monserrat", serif;
+    color: #f8f9fa;
+    text-align: center;
+    background-position: center,center;
+
+}
+h3{
+    width: 20px;
+    font-family: "Merriweather", serif;
+    color: #f8f9fa;
+    text-align: center;
+    background-position: center,center;
+
+}
+p{
+    color: #f8f9fa;
+    text-align: justify;
+    background-position: center,center;
+
+}
+link{
+    color: #007bff;
+}
+#inicio p{
+    text-decoration: dashed blue;
+}
+section{
+    box-shadow: 0 2px 10px rgba(0,0,0,0,.1);
+}

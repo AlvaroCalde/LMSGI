@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "02.dtd">
+<biblioteca>
+    <libro idlibro="libro1" genero="novela" >
+        <titulo>Punto para los locos</titulo>
+        <autores>
+            <autor>
+                <nombre>Angel</nombre>
+                <apellido>Martín</apellido>
+                <nacionalidad>Español</nacionalidad>
+            </autor>
+        </autores>
+        <anyo>2024</anyo>
+    </libro>
+</biblioteca>
