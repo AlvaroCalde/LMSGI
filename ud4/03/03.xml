@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE programmingLanguajes SYSTEM "03.dtd">
-<programmingLanguajes>
+<programmingLanguajes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="03.xsd">
     <lenguaje name="Python">
     <description>Python es un lenguaje de programación interpretado, de alto nivel y de propósito general.</description>
     <example>
