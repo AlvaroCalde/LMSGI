@@ -1,4 +1,4 @@
-<!ELEMENT   programmingLanguajes (lenguaje+)>
+<!ELEMENT   programmingLanguajes (lenguaje)+>
 <!ELEMENT   lenguaje (description?, example?)>
 <!ELEMENT   description (#PCDATA)>
 <!ELEMENT   example (#PCDATA)>
