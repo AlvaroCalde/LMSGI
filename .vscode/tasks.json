@@ -15,6 +15,19 @@
 			]
 		},
 		{
+			"type": "xslt-js",
+			"label": "xslt: Universidad",
+			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
+			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
+			"resultPath": "${workspaceFolder}/ud5/02/target/index.html",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		},
+		{
 			"type": "xslt",
 			"label": "xslt: Formulario",
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
@@ -30,5 +43,6 @@
 				"$saxon-xslt"
 			]
 		}
+		
 	]
 }
