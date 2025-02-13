@@ -33,7 +33,7 @@
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
 			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
 			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
-			"resultPath": "${workspaceFolder}/xsl-out/result1.xml",
+			"resultPath": "${workspaceFolder}/ud5/04/target/index.xml",
 			"allowSyntaxExtensions40": "off",
 			"messageEscaping": "adaptive",
 			"group": {
