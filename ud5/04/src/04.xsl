@@ -4,7 +4,7 @@
                 exclude-result-prefixes="#all"
                 expand-text="yes"
                 version="3.0">
-
+    <xsl:param name="corregido" select="'no'"/>
     <xsl:output method="xml" indent="yes"/>
     <xsl:mode on-no-match="shallow-copy"/>
 
@@ -17,10 +17,10 @@
             <body>
                 <header>
                     <h1><xsl:value-of select="datos/nombreCiclo"/></h1>
-                    <h2><xsl:value-of select="datos/nombreModulo"/></h2>
+                    <h2><xsl:value-of select="document('../input/modulosdaw1.xml')/modulos/modulo[@codM=current()/datos/nombreModulo]"/></h2>
                     <h3>
                     Fecha: <xsl:value-of select="datos/fecha/dia"/> de
-                    <xsl:value-of select="datos/fecha/mes"/> de 
+                    <xsl:value-of select="document('../input/meses.xml')/meses/mes[@id=current()/datos/fecha/mes]"/> de 
                     <xsl:value-of select="datos/fecha/anyo"/>
                     </h3>
                 </header>
@@ -32,9 +32,34 @@
                                     <xsl:value-of select="@id"/>.-
                                     <xsl:value-of select="enunciado"/>
                                 </div>
+                                <xsl:for-each select="respuestas/respuesta">
+                                <div class="respuesta">
+                                    <label>
+                                        <xsl:element name="input">
+                                            <xsl:attribute name="type" select="'radio'"/>
+                                            <xsl:attribute name="name" select="concat('p',../../@id)"/>
+                                            <xsl:attribute name="value" select="position()"/>
+                                            <xsl:if test="$corregido='si' and @correcta='correcta'">
+                                                <xsl:attribute name="checked"/>
+                                            </xsl:if>
+                                            <xsl:if test="$corregido">
+                                                <xsl:attribute name="disabled"/>
+                                            </xsl:if>
+                                        </xsl:element>
+                                        <xsl:value-of select="./text()"/>
+                                    </label>
+                                </div>
+                                </xsl:for-each>
                             </div>
                         </xsl:for-each>
+                        <xsl:if test="$corregido='no'">
+                        <div class="botones">
+                            <input type="submit" value="Enviar"/>
+                            <input type="reset" value="Borrar"/>
+                        </div>
+                    </xsl:if>
                     </form>
+                    
                 </main>
             </body>
         </html>
