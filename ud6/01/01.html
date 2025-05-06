@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 01 Json: Álvaro Calderón</title>
+</head>
+<body>
+    <p>Cargar JSON en el navegador</p>
+    <script>
+        fetch('./01.json')
+        .then(Response =>{
+            if (!Response.ok)
+                throw new Error('Mala respuesta de la web')
+                return Response.json();
+        }
+
+        )
+        .then (jsonData =>{
+            console.log(jsonData);
+            p=document.getElementById('parrafo');
+            p.innerHTML=`<span>Nombre: </span>${jsonData.nombre} <span>Edad: </span>
+            ${jsonData.edad}`
+        })
+        .catch(error => console.log(error));
+    </script>
+</body>
+</html>

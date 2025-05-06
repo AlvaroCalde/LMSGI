@@ -16,10 +16,10 @@
 		},
 		{
 			"type": "xslt-js",
-			"label": "xslt: Universidad",
+			"label": "xslt: Ex2ev-02",
 			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
 			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
-			"resultPath": "${workspaceFolder}/ud5/02/target/index.html",
+			"resultPath": "${workspaceFolder}/examen/Ex2ev-02/target/index.html",
 			"group": {
 				"kind": "build"
 			},
@@ -88,6 +88,22 @@
 			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
 			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
 			"resultPath": "${workspaceFolder}/ud5/07/target/result1.html",
+			"allowSyntaxExtensions40": "off",
+			"messageEscaping": "adaptive",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		},
+		{
+			"type": "xslt",
+			"label": "xslt: ex3",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
+			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
+			"resultPath": "${workspaceFolder}/examen/03/target/pedido.xml",
 			"allowSyntaxExtensions40": "off",
 			"messageEscaping": "adaptive",
 			"group": {

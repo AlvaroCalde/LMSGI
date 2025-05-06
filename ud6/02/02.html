@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <b>Listado de personas</b>
+    </header>
+    <div class="boton">
+        <input type="button" id="cargarlista" value="Cargar Lista (JSON)"/>
+    </div>
+    <script>
+        let contenedor=document.getElementById("contenido");
+        document.getElementById(boton).addEventListener("click",cargarlista);
+        function cargarlista (){
+        fetch('./02.json')
+            .then(Response =>{
+                if (!Response.ok)
+                    throw new Error('Mala respuesta de la web')
+                    return Response.json();
+            })
+            .then(Personas =>{
+                console.log(Personas);
+                personas.forEach(e => {
+                    contenedor.innerHTML=`<li><span>Nombre: </span>${e.nombre} <span>Edad: </span>
+                    ${e.edad}</li>`
+                })
+            } )
+            .catch(error => console.log(error));
+        }
+    </script>
+</body>
+</html>

@@ -11,6 +11,7 @@
     <meta name="author" content="Álvaro Calderón"/>
     <meta name="robots" content="index, follow"/>
     <meta name="keywords" content="html,css, xslt, xml"/>
+    <meta name="generator" content="Visual Studio Code"/>
     <title><xsl:value-of select="$titulo"/></title>
     </xsl:template>
 </xsl:stylesheet>
