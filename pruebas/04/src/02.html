@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+    <title>Ejercicio 2</title>
+  </head>
+  <body>
+    <header>
+      <h1>Distribución de software</h1>
+    </header>
+    <main>
+      <ul>
+        {
+          for $x in doc("02.xml")/sofware-libre/distribuciones/distribucion
+          return <li><a href="$x/web/text()">{$x/nombre/text()}</a></li>
+          
+        }
+      </ul>
+    </main>
+  </body>
+</html>
