@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="zodiaco">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="signo" maxOccurs="12" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        
+                                        <xs:pattern
+                                            value="Aries|Tauro|Gemenis|Cancer|Leo|Virgo|Libra|Escorpio|Sagitario|Capricornio|Acuario|Piscis."></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="fechaInicio" type="xs:string"/>
+                            <xs:element name="fechaFin" type="xs:string"/>  
+                        </xs:sequence>
+                        <xs:attribute name="id">     
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">                                 
+                                    <xs:pattern value="1|2|3|5|4|6|7|8|9|10|11|12"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
